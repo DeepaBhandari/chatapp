@@ -12,9 +12,9 @@ Here are the some of the steps on how you can install and code your chat app pro
 
    ``` npm install express socket.io ---save```
 
-2. Make server.js file inside the app
+3. Make server.js file inside the app
 
-3. setup express inside the server.js file
+4. setup express inside the server.js file
      ``` javascript
     const express = require('express');
     const path = require('path');
@@ -22,10 +22,45 @@ Here are the some of the steps on how you can install and code your chat app pro
     const app = express();
     const server = require('http').createServer(app);
 
-    app.use(express.static(path.join(_dirname+'/public')));
+    app.use(express.static(path.resolve('./public')));
 
-    server.listen(5000); 
+    server.listen(5000, () => console.log('server started at 5000 port'));
     ```
-    
 
+### For Frontend
 
+1. Create 3 files namely, 'code.js', 'index.html' and 'style.css'.
+
+2. Include the style and script file inside the html file by
+    ``` html
+    <!-- style file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- js files -->
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+    ```
+
+### Configure Socket and App Listener 
+
+1. Add these lines in server.js file
+
+    ``` javascript
+    const { Server } = require('socket.io');
+    const io = new Server(server);
+
+    io.on("connection", function (socket) {
+        socket.on("newuser", function (username) {
+            socket.broadcast.emit("update", `${username} joined the conversation`);
+        });
+        socket.on("exituser", function (username) {
+            socket.broadcast.emit("update", `${username} left the conversation`);
+        });
+        socket.on("chat", function (message) {
+            socket.broadcast.emit("chat", message);
+        });
+    });
+    ```
+2. Include this in "code.js" file
+   ```javascript
+   
+   ```
