@@ -1,6 +1,15 @@
 ## Chat App
 
-I have used HTML, CSS, Javascript and Node(express) and socket.io to build basic Chat room app.
+### Preview
+
+<p align="center">
+<img src="./public/assets/Screenshot 2024-02-24 104544.png" alt="Homepage Screenshot" width="200" />
+<img src="./public/assets/Screenshot 2024-02-24 104611.png" alt="Chatpage1 Screenshot" width="200"/>
+<img src="./public/assets/Screenshot 2024-02-24 104705.png" alt="Chatpage2 Screenshot" width="200"/>
+<img src="./public/assets/Screenshot 2024-02-24 104728.png" alt="Chatpage3 Screenshot" width="200" height="120"/>
+</p>
+
+This simple basic chat app has been built through the usage of "socket.io", "node/express" and "Vanilla JS".
 
 Here are the some of the steps on how you can install and code your chat app project.
 
