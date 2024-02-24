@@ -4,7 +4,7 @@ I have used HTML, CSS, Javascript and Node(express) and socket.io to build basic
 
 Here are the some of the steps on how you can install and code your chat app project.
 
-#### For server side (Node Express)
+### For server side (Node Express)
 
 1. Installation of packages inside the node.
 
