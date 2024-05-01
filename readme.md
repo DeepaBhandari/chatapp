@@ -158,3 +158,9 @@ Here are the some of the steps on how you can install and code your chat app pro
      };
    })();
    ```
+
+   ## Running the web chat app
+
+  - You can visit this web app in the [link](https://chatapp-mz4s.onrender.com/).
+
+  - Open the link in two different tabs and join the chat as different individuals from different names and could chat easily through this until you close the link.
