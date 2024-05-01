@@ -1,6 +1,6 @@
 (function () {
     const app = document.querySelector(".app");
-    const socket = io();
+    const socket = io('https://chatapp-mz4s.onrender.com');
 
     let uname;
 
